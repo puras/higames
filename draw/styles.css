@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+.game-area {
+    position: relative;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+#webcam {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: scaleX(-1); /* 水平翻转，便于用户操作 */
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#clearBtn {
+    background-color: #e74c3c;
+}
+
+#clearBtn:hover {
+    background-color: #c0392b;
+}
+
+#colorPicker {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#lineWidth {
+    width: 150px;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+}
+
+.instructions {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    #colorPicker {
+        width: 100%;
+    }
+    
+    #lineWidth {
+        width: 100%;
+    }
+}
